@@ -31,7 +31,6 @@ kr2-bootstrap-shop/
 ├── images/                   # Локальные фотографии из предыдущего учебного проекта
 ├── vendor/bootstrap/         # Локальные CSS, JS Bundle и лицензия
 ├── README.md
-├── DEFENSE.md                # Разбор кода и подготовка к защите
 └── .gitignore
 ```
 
