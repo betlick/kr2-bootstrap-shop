@@ -1,16 +1,51 @@
+/* оставляет небольшой зазор при переходе по якорям */
+html {
+  scroll-padding-top: 1rem;
+}
+
 body {
-  min-height: 100vh;
+  background-color: #fff;
 }
 
-.placeholder-box {
-  min-height: 240px;
-}
-
-.placeholder-image {
-  min-height: 320px;
-}
-
+/* contain сохраняет товар целиком, без обрезки фотографии. */
 .card-img-top {
-  height: 180px;
-  object-fit: cover;
+  height: 220px;
+  padding: 1rem;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+/* ограничение крупных фото */
+.hero-image,
+.product-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+.product-card {
+  transition: border-color 0.15s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  border-color: var(--bs-primary);
+}
+
+/* На телефоне прокручивается таблица, а слова не ломаются по буквам. */
+.table {
+  min-width: 360px;
+}
+
+@media (max-width: 575.98px) {
+  .hero-image,
+  .product-image {
+    max-height: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card {
+    transition: none;
+  }
 }
